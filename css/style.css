@@ -4,11 +4,35 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: red;
+    box-sizing: border-box; /*  */
+    scrollbar-width: thin;/* muda o tamanho da barra de rolagem */
+    scrollbar-color: red;/* muda cor da barra de rolagem  */
 }
 
 body{
-    background-color: black;
+    background-color: rgb(39, 39, 39);
 }
+
+/* Manipulação da cor do Logo (invert) */
+html[data-theme='dark'] .logo{
+    filter: invert(1);
+}
+
+/* Manipulação cabeçalho */
+#header{
+    display: flex; /* tela flexivel */
+    flex-flow: row wrap; /* quebra de linha */
+    justify-content: space-between; /* espaço por igual entre objetos (horizontal) */
+    align-items: center; /* espaço por igual entre objetos (vertical) */
+    width: 100%; /* ocupar a tela na verical */
+    padding: 10px 20px;
+}
+
+/* Logo */
+.logo{
+    width: 80px; /* comprimento(horizontal) */
+    height: auto; /* altura (vertical) */
+}
+
+
+
