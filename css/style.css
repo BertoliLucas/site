@@ -1,4 +1,29 @@
-/* regra CSS */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Patua+One&display=swap');
+
+/* 
+
+Root Font
+
+
+Patua one:
+  font-family: "Patua One", serif;
+  font-weight: 400;
+  font-style: normal;
+
+Outfit:
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+Inter:
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+
 
 /* reset CSS */
 * {
@@ -15,7 +40,7 @@ body {
 
 /*links*/
 a {
-    color:whitesmoke;
+    color:white;
     text-decoration: none;/* tirar sublinhado dos links */
 
 }
@@ -24,8 +49,6 @@ a {
 ul {
     list-style: none;/* remover pontinhos de listas */
 }
-
-
 
 /* Manipulação da cor do Logo (invert) */
 html[data-theme='dark'] .logo {
@@ -48,12 +71,14 @@ html[data-theme='dark'] .logo {
     height: auto; /* altura (vertical) */
 }
 
+/* Icone Cabeçalho (classe) */
 .header-toggle {
     display: flex;
     justify-content: flex-end;/* pra q o icone fique no final da tela */
+    min-width: 14%; /* largura minima do elemento */
 }
 
-/* Icone do Cabeçalho */
+/* Icone Cabeçalho (ID) */
 #toggleTheme {
     color: white; /* cor de texto */
     font-size: 20px; /* tamanho da fonte */
@@ -62,12 +87,11 @@ html[data-theme='dark'] .logo {
 
 }
 
-
 /* menu desktop */
 .menu {
     display: flex;
     align-items: center;
-    gap: 25px;/*gap(vão) espaço entre campos dentro do campo pai */
+    gap: 25px; /*gap(vão) espaço entre campos dentro do campo pai */
 
 }
 
@@ -75,10 +99,20 @@ html[data-theme='dark'] .logo {
     width: 100%;
 }
 
+/* botões */
 .menu-link {
     display: flex;
-    text-transform: uppercase; /* todas as letras em caixa alta */
 }
+
+/* Personalização do texto (span dentro do <a>) */
+.menu-texto{
+    font-size: 12px; /* tamanho da fonte */
+    text-transform: uppercase; /* todas as letras em caixa alta */
+    font-family: "Outfit", sans-serif; /* estilização de fonte */  
+    font-weight: 300; /* espessura da letra (normalmente entre 100-900) */
+}
+
+
 
 
 
