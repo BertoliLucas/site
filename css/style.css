@@ -9,17 +9,31 @@
     scrollbar-color: red;/* muda cor da barra de rolagem  */
 }
 
-body{
+body {
     background-color: rgb(39, 39, 39);
 }
 
+/*links*/
+a {
+    color:whitesmoke;
+    text-decoration: none;/* tirar sublinhado dos links */
+
+}
+
+/*listas*/
+ul {
+    list-style: none;/* remover pontinhos de listas */
+}
+
+
+
 /* Manipulação da cor do Logo (invert) */
-html[data-theme='dark'] .logo{
+html[data-theme='dark'] .logo {
     filter: invert(1);
 }
 
 /* Manipulação cabeçalho */
-#header{
+#header {
     display: flex; /* tela flexivel */
     flex-flow: row wrap; /* quebra de linha */
     justify-content: space-between; /* espaço por igual entre objetos (horizontal) */
@@ -29,10 +43,47 @@ html[data-theme='dark'] .logo{
 }
 
 /* Logo */
-.logo{
+.logo {
     width: 80px; /* comprimento(horizontal) */
     height: auto; /* altura (vertical) */
 }
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;/* pra q o icone fique no final da tela */
+}
+
+/* Icone do Cabeçalho */
+#toggleTheme {
+    color: white; /* cor de texto */
+    font-size: 20px; /* tamanho da fonte */
+    cursor: pointer; /* sinalizando q é um clique */
+    transition: all 0.6s ease-in-out; /* transição entre modo dark e light */
+
+}
+
+
+/* menu desktop */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;/*gap(vão) espaço entre campos dentro do campo pai */
+
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    text-transform: uppercase; /* todas as letras em caixa alta */
+}
+
+
+
+
+
 
 
 
