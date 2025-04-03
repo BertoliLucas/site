@@ -124,9 +124,34 @@ html[data-theme='dark'] .logo {
 }
 
 .menu-mobile {
-    bottom: 0;/* joga os botões la pra baixo */
     position: fixed;
+    bottom: 0;/* joga os botões la pra baixo */
+    width: 100vw; /* VW = view port */
+    justify-content: space-between;/* faz separação dos itens */
+    border-top: 1px solid #989898;
+    z-index: 1; /* sobrepoem as coisas */
+    
 }
+
+/* configuração de hover do mouse */
+.menu-link.active .icone-link,
+.menu-link.active .menu-texto,
+.menu-link:hover .icone-link,
+.menu-link:hover .menu-texto {
+    color: red;
+    font-weight: 400;
+}
+
+.icone-link, 
+.menu-texto{
+    color: #989898;
+    font-weight: 400;
+}
+
+.icone-link {
+    font-size: 25px;
+}
+
 
 /* CSS Responsivo */
 
