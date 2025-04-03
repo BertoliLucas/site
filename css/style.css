@@ -75,7 +75,6 @@ html[data-theme='dark'] .logo {
 .header-toggle {
     display: flex;
     justify-content: flex-end;/* pra q o icone fique no final da tela */
-    min-width: 14%; /* largura minima do elemento */
 }
 
 /* Icone Cabeçalho (ID) */
@@ -110,6 +109,42 @@ html[data-theme='dark'] .logo {
     text-transform: uppercase; /* todas as letras em caixa alta */
     font-family: "Outfit", sans-serif; /* estilização de fonte */  
     font-weight: 300; /* espessura da letra (normalmente entre 100-900) */
+}
+
+
+.header-nav {
+    display: none;/* faz o menu desktop sumir quando tela está menor que 768px */
+}
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;      
+}
+
+.menu-mobile {
+    bottom: 0;/* joga os botões la pra baixo */
+    position: fixed;
+}
+
+/* CSS Responsivo */
+
+/* @media cria a possibilidade de criação de tela */
+/* a partir telas 768px */
+@media (min-width: 768px) {
+    .header-nav {
+        display: flex;
+    }
+
+    .header-nav,
+    .header-toggle {
+        min-width: 25%; /* largura minima do elemento (até 'x') */
+    }
+
+    .nav-mobile {
+        display: none;
+    }
 }
 
 
