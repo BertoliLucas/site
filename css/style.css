@@ -36,6 +36,7 @@ Inter:
 
 body {
     background-color: rgb(39, 39, 39);
+    color: whitesmoke;
 }
 
 /*links*/
@@ -138,7 +139,7 @@ html[data-theme='dark'] .logo {
 .menu-link.active .menu-texto,
 .menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
-    color: red;
+    color: white;
     font-weight: 400;
 }
 
@@ -148,6 +149,7 @@ html[data-theme='dark'] .logo {
     font-weight: 400;
 }
 
+/* tamanho do icone */
 .icone-link {
     font-size: 25px;
 }
