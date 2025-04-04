@@ -140,7 +140,6 @@ html[data-theme='dark'] .logo {
 .menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
     color: white;
-    font-weight: 400;
 }
 
 .icone-link, 
