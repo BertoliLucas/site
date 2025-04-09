@@ -1,6 +1,30 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Patua+One&display=swap');
 
+
+/* Variaveis de cores */
+
+/* defini cores tema dark */
+
+:root,
+:root[data-theme="dark"] {
+
+    --fundo_header: #222;
+    --linha_header : #ccc;
+    --body_color : #222;
+
+}
+/* definir cores tema light */
+:root[data-theme="light"] {
+
+    --fundo_header: #ccc;
+    --linha_header : #222;
+    --body_color : #ccc;
+
+}
+
+
+
 /* 
 
 Root Font
@@ -35,8 +59,8 @@ Inter:
 }
 
 body {
-    background-color: rgb(39, 39, 39);
-    color: whitesmoke;
+    background-color: var(--body_color);
+    color: white;
 }
 
 /*links*/
@@ -153,7 +177,7 @@ strong{
     justify-content: space-between;/* faz separação dos itens */
     border-top: 1px solid #989898;
     z-index: 1; /* sobrepoem as coisas */
-    
+    background: rgb(39, 39, 39); /* muda cor da div */    
 }
 
 /* configuração de hover do mouse */
@@ -217,8 +241,14 @@ strong{
 }
 
 .btn:hover{
-    transform: scale(1.05); /* da um zoom no elemento */
-    transition: all ease-in-out .5s; /* muda o tempo da animação */
+    transform: scale(1.02); /* da um zoom no elemento */
+    transition: all ease-in-out .4s; /* muda o tempo da animação */
+}
+
+/* Mudar cor da palavra e do icone no zoom */
+.btn:hover span,
+.btn:hover i {
+    color: red;
 }
 
 .video iframe{
@@ -226,7 +256,22 @@ strong{
     aspect-ratio: 16/9;
 }
 
+.icone-social {
+    font-size: 22px;
+    color: #989898;
+}
 
+.icone-social:hover {
+    color: white;    
+}
+
+/* estrutura */
+
+/* Atualizações Futuras */
+
+#home{
+    padding: 40px 16px;
+}
 
 
 /* CSS Responsivo */
@@ -234,6 +279,14 @@ strong{
 /* @media cria a possibilidade de criação de tela */
 /* a partir telas 768px */
 @media (min-width: 768px) {
+
+    #header {
+        position: fixed; /* trava a div e sobrepôem os elementos */
+        border-bottom: 1px solid var(--linha_header); /* cria uma borda embaixo da div */
+        padding: 16px 96px;
+        background-color: var(--fundo_header);  /* muda cor da div */
+    }
+
     .header-nav {
         display: flex;
     }
@@ -245,6 +298,25 @@ strong{
 
     .nav-mobile {
         display: none;
+    }
+
+    /* Atualização futura */    
+    #home{
+        padding: 128px 96px 64px 96px; /* 1° top 2°right 3°bottom 4°left */
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* faz com que os valores comecem da esquerda pra direita */
+    }
+}
+
+/* 1200px */
+@media (min-width: 1200px) {
+
+    #home {
+        padding: 160px 96px 32px;  /* 1° top 2°right&left 3° bottom*/
     }
 }
 
