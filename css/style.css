@@ -9,21 +9,22 @@
 :root,
 :root[data-theme="dark"] {
 
-    --fundo_header: #222;
-    --linha_header : #ccc;
-    --body_color : #222;
+    --bgd: #222; /* Cor fundo */
+    --color: whitesmoke; /* Cor do texto */
+    --hover: white;
+    --links: gray;
+    
 
 }
 /* definir cores tema light */
 :root[data-theme="light"] {
 
-    --fundo_header: #ccc;
-    --linha_header : #222;
-    --body_color : #ccc;
+    --bgd: rgb(206,206,206); /* Cor fundo */
+    --color: rgb(22, 22, 22); /* Cor do texto */
+    --hover: black;
+    --links: gray;
 
 }
-
-
 
 /* 
 
@@ -59,13 +60,13 @@ Inter:
 }
 
 body {
-    background-color: var(--body_color);
-    color: white;
+    background-color: var(--bgd);
+    color: var(--color);
 }
 
 /*links*/
 a {
-    color:white;
+    color: var(--color);
     text-decoration: none; /* tirar sublinhado dos links */
 
 }
@@ -126,7 +127,7 @@ strong{
 
 /* Icone Cabeçalho (ID) */
 #toggleTheme {
-    color: white; /* cor de texto */
+    color: var(--color); /* cor de texto */
     font-size: 20px; /* tamanho da fonte */
     cursor: pointer; /* sinalizando q é um clique */
     transition: all 0.6s ease-in-out; /* transição entre modo dark e light */
@@ -175,9 +176,9 @@ strong{
     bottom: 0;/* joga os botões la pra baixo */
     width: 100vw; /* VW = view port */
     justify-content: space-between;/* faz separação dos itens */
-    border-top: 1px solid #989898;
+    border-top: 1px solid var(--color);
     z-index: 1; /* sobrepoem as coisas */
-    background: rgb(39, 39, 39); /* muda cor da div */    
+    background: var(--bgd); /* muda cor da div */    
 }
 
 /* configuração de hover do mouse */
@@ -185,12 +186,12 @@ strong{
 .menu-link.active .menu-texto,
 .menu-link:hover .icone-link,
 .menu-link:hover .menu-texto {
-    color: white;
+    color: var(--hover);
 }
 
 .icone-link, 
 .menu-texto{
-    color: #989898;
+    color: var(--links);
     font-weight: 400;
 }
 
@@ -231,24 +232,28 @@ strong{
 
 /* botão principal */
 .btn-primary {
-    border: 1px solid white;
+    border: 1px solid var(--links);
+}
+
+.btn-primary:hover {
+    border: 1px solid var(--bgd);
 }
 
 .btn span,
 .btn i {
-    color: white;
+    color: var(--links);
     font-size: 18px;
 }
 
 .btn:hover{
-    transform: scale(1.02); /* da um zoom no elemento */
+    transform: scale(1.07); /* da um zoom no elemento */
     transition: all ease-in-out .4s; /* muda o tempo da animação */
 }
 
 /* Mudar cor da palavra e do icone no zoom */
 .btn:hover span,
 .btn:hover i {
-    color: red;
+    color: var(--hover);
 }
 
 .video iframe{
@@ -258,11 +263,11 @@ strong{
 
 .icone-social {
     font-size: 22px;
-    color: #989898;
+    color: var(--links);
 }
 
 .icone-social:hover {
-    color: white;    
+    color: var(--hover);    
 }
 
 /* estrutura */
@@ -282,9 +287,9 @@ strong{
 
     #header {
         position: fixed; /* trava a div e sobrepôem os elementos */
-        border-bottom: 1px solid var(--linha_header); /* cria uma borda embaixo da div */
+        border-bottom: 1px solid var(--color); /* cria uma borda embaixo da div */
         padding: 16px 96px;
-        background-color: var(--fundo_header);  /* muda cor da div */
+        background-color: var(--bgd);  /* muda cor da div */
     }
 
     .header-nav {
@@ -319,13 +324,4 @@ strong{
         padding: 160px 96px 32px;  /* 1° top 2°right&left 3° bottom*/
     }
 }
-
-
-
-
-
-
-
-
-
 
