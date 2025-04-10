@@ -56,7 +56,11 @@ Inter:
     padding: 0;
     box-sizing: border-box; /*  */
     scrollbar-width: thin;/* muda o tamanho da barra de rolagem */
-    scrollbar-color: red;/* muda cor da barra de rolagem  */
+    scrollbar-color: var(--hover);/* muda cor da barra de rolagem  */
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -274,7 +278,8 @@ strong{
 
 /* Atualizações Futuras */
 
-#home{
+#home,
+.projetos{
     padding: 40px 16px;
 }
 
@@ -306,7 +311,8 @@ strong{
     }
 
     /* Atualização futura */    
-    #home{
+    #home,
+    .projetos{
         padding: 128px 96px 64px 96px; /* 1° top 2°right 3°bottom 4°left */
     }
 
@@ -320,8 +326,36 @@ strong{
 /* 1200px */
 @media (min-width: 1200px) {
 
-    #home {
+    #home{
         padding: 160px 96px 32px;  /* 1° top 2°right&left 3° bottom*/
+    }
+
+    h1{
+        font-size: 85px;
+    }
+
+    h2{
+        font-size: 65px;
+    }
+
+    p, span, li{
+        font-size: 22px;
+    }
+}
+
+/* 1400px */
+@media (min-width: 1400px) {
+
+    h1{
+        font-size: 100px;
+    }
+
+    h2{
+        font-size: 70px;
+    }
+
+    .projetos{
+        padding: 160px 240px 64px;
     }
 }
 
