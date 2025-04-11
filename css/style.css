@@ -12,17 +12,19 @@
     --bgd: #222; /* Cor fundo */
     --color: whitesmoke; /* Cor do texto */
     --hover: white;
-    --links: gray;
+    --links: rgb(122, 122, 122);
+    --sombra: rgb(226, 226, 226);
     
 
 }
 /* definir cores tema light */
 :root[data-theme="light"] {
 
-    --bgd: rgb(206,206,206); /* Cor fundo */
+    --bgd: rgb(230, 230, 230); /* Cor fundo */
     --color: rgb(22, 22, 22); /* Cor do texto */
     --hover: black;
-    --links: gray;
+    --links: rgb(122, 122, 122);
+    --sombra: rgb(37, 37, 37);
 
 }
 
@@ -59,6 +61,12 @@ Inter:
     scrollbar-color: var(--hover);/* muda cor da barra de rolagem  */
 }
 
+/* Manipulação da cor do Logo (invert) */
+html[data-theme='dark'] .logo {
+    filter: invert(1);
+}
+
+/* Deixa o scroll suave */
 html{
     scroll-behavior: smooth;
 }
@@ -80,16 +88,30 @@ ul {
     list-style: none;/* remover pontinhos de listas */
 }
 
-/* Manipulação da cor do Logo (invert) */
-html[data-theme='dark'] .logo {
-    filter: invert(1);
-}
 
 h1 {
     font-size: 40px; /* tamanho da fonte */
     font-weight: 200; /* espessura da fonte */
     font-family: "Outfit", sans-serif; /* fonte */
     letter-spacing: 2px; /* espaçamento das letras */
+}
+
+h2 {
+    font-size: 35px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 p, li, span {
@@ -262,7 +284,8 @@ strong{
 
 .video iframe{
     width: 100%;
-    aspect-ratio: 16/9;
+    /* aspect-ratio: 16/9; */
+    display: flex;
 }
 
 .icone-social {
@@ -274,7 +297,60 @@ strong{
     color: var(--hover);    
 }
 
+
 /* estrutura */
+
+/* Projetos */
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-img {
+    width: 100%;
+    pointer-events: none; /* bloquea as opções do botão direito */
+    border-radius: 10px; /* arredonda os cantos */
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 5px var(--sombra); /* sombreamento do objeto */
+}
+
+.card-description {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.icon-list{
+    color: rgb(10, 165, 165);
+    font-size: 14px;
+}
+
+.card-item{
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+}
+
+/* CARD BODY AMANHÃ */
 
 /* Atualizações Futuras */
 
@@ -321,6 +397,24 @@ strong{
         flex-direction: column;
         align-items: flex-start; /* faz com que os valores comecem da esquerda pra direita */
     }
+}
+
+/* 992px */
+@media (min-width: 992px) {
+
+    .projeto-card {
+        flex-direction: row; /* deixa os elementos em linha */
+    }
+
+    .projeto-card .card-reverse {
+        flex-direction: row-reverse;
+        justify-content: end;
+    }
+
+    .card-img {
+        width: 55%;
+    }
+
 }
 
 /* 1200px */
