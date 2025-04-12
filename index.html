@@ -15,6 +15,9 @@
     <!-- FavIcon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,25 +29,25 @@
         <nav class="header-nav">
             <ul class="menu menu-principal">
 
-                <li class="menu-item">
+                <li class="menu-item" data-aos="zoom-in" data-aos-delay="100">
                     <a href="#home" class="menu-link active">
                         <span class="menu-texto"> home </span>
                     </a>
                 </li>
 
-                <li class="menu-item">
+                <li class="menu-item" data-aos="zoom-in" data-aos-delay="200">
                     <a href="#projetos" class="menu-link">
                         <span class="menu-texto"> projetos </span>
                     </a>
                 </li>
 
-                <li class="menu-item">
+                <li class="menu-item" data-aos="zoom-in" data-aos-delay="300">
                     <a href="#sobre" class="menu-link">
                         <span class="menu-texto"> sobre </span>
                     </a>
                 </li>
 
-                <li class="menu-item">
+                <li class="menu-item" data-aos="zoom-in" data-aos-delay="400">
                     <a href="#contato" class="menu-link">
                         <span class="menu-texto"> contato </span>
                     </a>
@@ -54,14 +57,15 @@
         </nav> <!-- Fim Menu desktop -->
 
         <!-- Logo -->
-        <div>
+        
+        <div data-aos="zoom-in">
             <a href="#home">
                 <img src="img/logo.png" alt="" class="logo">
             </a>
         </div>
 
         <!-- Icone Sol -->
-        <div class="header-toggle">
+        <div class="header-toggle" data-aos="zoom-in" data-aos-delay="300">
             <i class="bi bi-sun" id="toggleTheme"></i>
         </div>
 
@@ -112,14 +116,15 @@
 
         <div class="main-content">
 
-            <h1> 
+            <h1  data-aos="fade-right" data-aos-delay="500"> 
                 <strong>
                     Soluções Digitais &
                 </strong>
                 Desenvolvimento Front-End.
+            
             </h1>
 
-            <p> Lucas Bertoli - SP, Desenvovedor e Instrutor Front-End.</p>
+            <p  data-aos="fade-right" data-aos-delay="600"> Lucas Bertoli - SP, Desenvovedor e Instrutor Front-End.</p>
 
             
             <ul class="menu menu-social">
@@ -127,68 +132,69 @@
                 <!-- instagram -->
                 <li>
                     <a href="https://instagram.com/Bertolli__" target="_blank"> <!-- target_blank faz com que href abra em outra aba -->
-                        <i class="icone-social bi bi-instagram"></i>
+                        <i class="icone-social bi bi-instagram" data-aos="fade-right" data-aos-delay="600"></i>
                     </a>
                 </li>
            
                 <!-- github -->
                 <li>
                     <a href="https://github.com/BertoliLucas"  target="_blank">
-                        <i class="icone-social bi bi-github"></i>
+                        <i class="icone-social bi bi-github"  data-aos="fade-right" data-aos-delay="700"></i>
                     </a>
                 </li>
             
                 <!-- vazio -->
                <li>
                     <a href="#"  target="_blank">
-                        <i class="icone-social bi bi-question-square"></i>
+                        <i class="icone-social bi bi-question-square"  data-aos="fade-right" data-aos-delay="800"></i>
                     </a>
                 </li>
             
                 <!-- vazio -->
                 <li>
                     <a href="#"  target="_blank">
-                        <i class="icone-social bi bi-question-square"></i>
+                        <i class="icone-social bi bi-question-square"  data-aos="fade-right" data-aos-delay="900"></i>
                     </a>
                 </li>
 
                 <!-- vazio -->
                 <li>
                     <a href="#"  target="_blank">
-                        <i class="icone-social bi bi-question-square"></i>
+                        <i class="icone-social bi bi-question-square"  data-aos="fade-right" data-aos-delay="1000"></i>
                     </a>
                 </li>
 
                 <!-- vazio -->
                 <li>
                     <a href="#" target="_blank">
-                        <i class="icone-social bi bi-question-square"></i>
+                        <i class="icone-social bi bi-question-square"  data-aos="fade-right" data-aos-delay="1100"></i>
                     </a>
                 </li>
 
             </ul>
             
             <a href="#projetos">
-                <button class="btn btn-primary">
+                <button class="btn btn-primary"  data-aos="fade-right" data-aos-delay="1200">
                     <span> Ver Projetos </span>
                     <i class="bi bi-arrow-down-right"></i>
                 </button>
             </a>
-            <!-- Video -->
-            <div class="video">
-                <iframe  src="https://www.youtube.com/embed/aOGFY1R4QQ4" title="HACKING GOOGLE: Series Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
             
         </div>
-
+        
+        <!-- Video -->
+        <div class="video">
+            <iframe  src="https://www.youtube.com/embed/aOGFY1R4QQ4" title="HACKING GOOGLE: Series Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         
         <!-- Fim main content -->
         
         
     </main>
     
-    <!-- Projetos -->
 
+    <!-- Projetos -->
+    
     <section id="projetos" class="projetos">
 
         <!-- Titulos -->
@@ -235,7 +241,7 @@
 
             <!-- Projeto 2 -->
 
-            <article class="projeto-card">
+            <article class="projeto-card card-reverse">
 
                 <img src="img/josisbox.jpg" alt="" class="card-img">
 
@@ -250,18 +256,18 @@
                     <ul class="card-lista">
 
                         <li class="card-item">
-                            <i class="icon-list bi bi-chevron-double-right"></i>
                             Literatura
+                            <i class="icon-list bi bi-chevron-double-right"></i>
                         </li>
 
                         <li class="card-item">
-                            <i class="icon-list bi bi-chevron-double-right"></i>
                             História
+                            <i class="icon-list bi bi-chevron-double-right"></i>
                         </li>
 
                         <li class="card-item">
-                            <i class="icon-list bi bi-chevron-double-right"></i>
                             Tecnologia
+                            <i class="icon-list bi bi-chevron-double-right"></i>
                         </li>
                         
                     </ul>
@@ -312,10 +318,17 @@
 
     </section>
 
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-
-
+    <!-- link js -->
     <script src="js/script.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
 
 </body>
 

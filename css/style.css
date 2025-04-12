@@ -13,7 +13,7 @@
     --color: whitesmoke; /* Cor do texto */
     --hover: white;
     --links: rgb(122, 122, 122);
-    --sombra: rgb(226, 226, 226);
+    --sombra: rgb(212, 212, 212);
     
 
 }
@@ -23,7 +23,7 @@
     --bgd: rgb(230, 230, 230); /* Cor fundo */
     --color: rgb(22, 22, 22); /* Cor do texto */
     --hover: black;
-    --links: rgb(122, 122, 122);
+    --links: rgb(105, 105, 105);
     --sombra: rgb(37, 37, 37);
 
 }
@@ -137,6 +137,7 @@ strong{
     align-items: center; /* espaço por igual entre objetos (vertical) */
     width: 100%; /* ocupar a tela na verical */
     padding: 10px 20px;
+    z-index: 999999;
 }
 
 /* Logo */
@@ -242,6 +243,10 @@ strong{
     gap: 25px; /* vão entre entidades */
 }
 
+.main-content p {
+    color: var(--links);
+}
+
 /* botões */
 .btn {
     display: flex;
@@ -284,8 +289,7 @@ strong{
 
 .video iframe{
     width: 100%;
-    /* aspect-ratio: 16/9; */
-    display: flex;
+    aspect-ratio: 16/9;
 }
 
 .icone-social {
@@ -350,7 +354,9 @@ strong{
     font-weight: 200;
 }
 
-/* CARD BODY AMANHÃ */
+
+
+
 
 /* Atualizações Futuras */
 
@@ -363,12 +369,16 @@ strong{
 /* CSS Responsivo */
 
 /* @media cria a possibilidade de criação de tela */
-/* a partir telas 768px */
+/* min-width = a partir telas Xpx */
+/* max-width = até telas Xpx */
+
+
 @media (min-width: 768px) {
 
     #header {
         position: fixed; /* trava a div e sobrepôem os elementos */
         border-bottom: 1px solid var(--color); /* cria uma borda embaixo da div */
+        box-shadow: 0 0 5px var(--sombra);
         padding: 16px 96px;
         background-color: var(--bgd);  /* muda cor da div */
     }
@@ -406,9 +416,23 @@ strong{
         flex-direction: row; /* deixa os elementos em linha */
     }
 
-    .projeto-card .card-reverse {
+    .projeto-card.card-reverse {
         flex-direction: row-reverse;
         justify-content: end;
+    }
+
+    .card-reverse .card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .card-img {
@@ -450,6 +474,15 @@ strong{
 
     .projetos{
         padding: 160px 240px 64px;
+    }
+}
+
+@media (max-width: 992px) {
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 
