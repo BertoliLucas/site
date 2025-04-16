@@ -114,6 +114,18 @@ h3 {
     text-transform: uppercase;
 }
 
+h4 {
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    text-align: left;
+}
+
+span {
+    font-family: "Outfit", sans-serif;
+    font-weight: 250;
+}
+
 p, li, span {
     font-size: 18px;/* tamanho da fonte */
 }
@@ -129,7 +141,7 @@ strong{
 
 
 
-/* Manipulação cabeçalho */
+/* Manipulação cabeçalho -------------------------------------------------------------------------------------------------------------------------------------*/
 #header {
     display: flex; /* tela flexivel */
     flex-flow: row wrap; /* quebra de linha */
@@ -229,7 +241,7 @@ strong{
 
 /* Fim CSS Menu */
 
-/* Inicio CSS Main */
+/* Inicio CSS Main ------------------------------------------------------------------------------------------------------------------------ */
 
 #home{
     display: flex;
@@ -304,7 +316,7 @@ strong{
 
 /* estrutura */
 
-/* Projetos */
+/* Projetos ---------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .projetos {
     display: flex;
@@ -342,7 +354,7 @@ strong{
 }
 
 .icon-list{
-    color: rgb(10, 165, 165);
+    color: #05a2e5;
     font-size: 14px;
 }
 
@@ -354,19 +366,71 @@ strong{
     font-weight: 200;
 }
 
+/* Sobre -----------------------------------------------------------------------------------------------------------------------------------------*/
 
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+.sobre-perfil{
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    border-radius: 50%;
+    border: 8px solid var(--color);
+    object-position: center; 
+}
 
+.sobre-content1,
+.sobre-content2{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.sobre-descricao {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.sobre-skills,
+.sobre-icones{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sobre-skills i,
+.sobre-icones i{
+    font-size: 20px;
+    color: #05a2e5;
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 32px;
+}
 
 /* Atualizações Futuras */
 
 #home,
-.projetos{
+.projetos,
+.sobre,
+.contato{
     padding: 40px 16px;
 }
 
 
-/* CSS Responsivo */
+/* CSS Responsivo ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* @media cria a possibilidade de criação de tela */
 /* min-width = a partir telas Xpx */
@@ -398,7 +462,9 @@ strong{
 
     /* Atualização futura */    
     #home,
-    .projetos{
+    .projetos,
+    .sobre,
+    .contato{
         padding: 128px 96px 64px 96px; /* 1° top 2°right 3°bottom 4°left */
     }
 
@@ -439,6 +505,35 @@ strong{
         width: 55%;
     }
 
+    .sobre {
+        gap: 10px;
+    }
+
+    .sobre-content1,
+    .sobre-content2 {
+        display: grid;
+        grid-template-columns: 40% 60%; /* dvide a parte que a div vai ocupar */
+        justify-content: flex-start;
+        gap: 64px;
+    }
+
+    .sobre-content2 .col1 .row1,
+    .sobre-content2 .col1 .row1{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+
+    .descricao-button {
+        justify-content: flex-start;
+    }
+
+
+
 }
 
 /* 1200px */
@@ -459,6 +554,10 @@ strong{
     p, span, li{
         font-size: 22px;
     }
+
+    .descricao-button .btn{
+        width: auto;
+    }
 }
 
 /* 1400px */
@@ -472,7 +571,8 @@ strong{
         font-size: 70px;
     }
 
-    .projetos{
+    .projetos,
+    .sobre{
         padding: 160px 240px 64px;
     }
 }
