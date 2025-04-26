@@ -390,13 +390,13 @@ strong{
     flex-direction: column;
     align-items: left;
     gap: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .sobre-descricao {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -474,14 +474,29 @@ strong{
 }
 
 /* Contato ---------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .contato{
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid var(--color);
 }
 
 .contato p{
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.contato .email{
+    text-transform: none;
+}
+
+.contato span{
+    text-transform: uppercase;
+    margin-left: 5px;
 }
 
 .menu-link:hover .link-contato,
@@ -493,11 +508,10 @@ strong{
     color: var(--links);
 }
 
-/* Roda Pé ----------------------------------------------------------------------------------------------------------------------------------------- */
+/* Rodapé ----------------------------------------------------------------------------------------------------------------------------------------- */
 
 footer{
-    margin-bottom: 60px;
-    border-top: 1px solid var(--color);
+    margin-bottom: 80px;
 }
 
 footer p{
@@ -512,10 +526,10 @@ footer a{
     color: var(--links);
 }
 
-footer i:hover,
-footer a:hover {
-    color: rgb(106, 106, 255);
-    transition: ease-in-out .3s;
+footer:hover .icone-social,
+footer:hover a {
+    color: #05a2e5;
+    transition: ease-in-out .2s;
 }
 
 
@@ -673,7 +687,7 @@ footer a:hover {
     .projetos,
     .sobre,
     .contato{
-        padding: 160px 240px 64px;
+        padding: 140px 240px 64px;
     }
 }
 

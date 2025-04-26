@@ -1,7 +1,8 @@
 /* const é o objeto icone para trocar a cor do site */
 const toggleTheme = document.getElementById("toggleTheme");
 const rootHtml = document.documentElement;
-const accordionHeader = document.querySelectorAll(".accordion-header")
+const accordionHeader = document.querySelectorAll(".accordion-header");
+const menuLinks = document.querySelectorAll(".menu-link");
 
 /* Mudança de Tema */
 function changeTheme () {
@@ -27,6 +28,19 @@ accordionHeader.forEach(header => {
         const accordionActive = accordiionItem.classList.contains("active");
 
         accordionActive ? accordiionItem.classList.remove("active") : accordiionItem.classList.add("active")
+
+    })
+
+})
+
+/* Mudança menu-cor */
+
+menuLinks.forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        menuLinks.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
 
     })
 
