@@ -306,12 +306,13 @@ strong{
 }
 
 .icone-social {
-    font-size: 22px;
+    font-size: 25px;
     color: var(--links);
 }
 
 .icone-social:hover {
-    color: var(--hover);    
+    color: var(--hover);
+    transition: ease-in-out .5s;    
 }
 
 
@@ -502,11 +503,68 @@ strong{
 .menu-link:hover .link-contato,
 .menu-link:hover .icone-social {
     color: var(--hover);
+    transition: ease-in-out .5s;
 }
 
 .link-contato {
     color: var(--links);
 }
+
+/* Forms */
+
+.form-contato{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    background-color: var(--links);
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px var(--sombra);
+    font-family: "Outfit", sans-serif;
+}
+
+.form-contato label{
+    color: var(--color);
+    font-size: 20px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+}
+
+.form-contato input,
+.form-contato textarea{
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--bgd);
+    color: var(--color);
+    border-radius: 8px;
+    outline: none;
+    transition: ease-in-out .3s;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus{
+    background-color: var(--sombra);
+    color: var(--bgd);
+    box-shadow: 0 0 5px var(--sombra);
+}
+
+.form-contato textarea {
+    resize: vertical;
+    max-height: 500px;
+    min-height: 120px;
+}
+
+.form-contato .btn-primary{
+    border-color: var(--color);
+}
+
+
 
 /* Rodapé ----------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -526,10 +584,10 @@ footer a{
     color: var(--links);
 }
 
-footer:hover .icone-social,
-footer:hover a {
+footer .icone-social:hover,
+footer a:hover{
     color: #05a2e5;
-    transition: ease-in-out .2s;
+    transition: ease-in-out .5s;
 }
 
 
