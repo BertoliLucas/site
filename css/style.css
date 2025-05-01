@@ -9,19 +9,24 @@
 :root,
 :root[data-theme="dark"] {
 
-    --bgd: #222; /* Cor fundo */
-    --color: whitesmoke; /* Cor do texto */
+    --bgd: #222;
+    /* Cor fundo */
+    --color: whitesmoke;
+    /* Cor do texto */
     --hover: white;
     --links: rgb(122, 122, 122);
     --sombra: rgb(212, 212, 212);
-    
+
 
 }
+
 /* definir cores tema light */
 :root[data-theme="light"] {
 
-    --bgd: rgb(230, 230, 230); /* Cor fundo */
-    --color: rgb(22, 22, 22); /* Cor do texto */
+    --bgd: rgb(230, 230, 230);
+    /* Cor fundo */
+    --color: rgb(22, 22, 22);
+    /* Cor do texto */
     --hover: black;
     --links: rgb(105, 105, 105);
     --sombra: rgb(37, 37, 37);
@@ -56,9 +61,12 @@ Inter:
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /*  */
-    scrollbar-width: thin;/* muda o tamanho da barra de rolagem */
-    scrollbar-color: var(--hover);/* muda cor da barra de rolagem  */
+    box-sizing: border-box;
+    /*  */
+    scrollbar-width: thin;
+    /* muda o tamanho da barra de rolagem */
+    scrollbar-color: var(--hover);
+    /* muda cor da barra de rolagem  */
 }
 
 /* Manipulação da cor do Logo (invert) */
@@ -67,7 +75,7 @@ html[data-theme='dark'] .logo {
 }
 
 /* Deixa o scroll suave */
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -79,21 +87,27 @@ body {
 /*links*/
 a {
     color: var(--color);
-    text-decoration: none; /* tirar sublinhado dos links */
+    text-decoration: none;
+    /* tirar sublinhado dos links */
 
 }
 
 /*listas*/
 ul {
-    list-style: none;/* remover pontinhos de listas */
+    list-style: none;
+    /* remover pontinhos de listas */
 }
 
 
 h1 {
-    font-size: 65px; /* tamanho da fonte */
-    font-weight: 200; /* espessura da fonte */
-    font-family: "Outfit", sans-serif; /* fonte */
-    letter-spacing: 2px; /* espaçamento das letras */
+    font-size: 65px;
+    /* tamanho da fonte */
+    font-weight: 200;
+    /* espessura da fonte */
+    font-family: "Outfit", sans-serif;
+    /* fonte */
+    letter-spacing: 2px;
+    /* espaçamento das letras */
 }
 
 h2 {
@@ -126,51 +140,69 @@ span {
     font-weight: 270;
 }
 
-p, li, span {
-    font-size: 20px;/* tamanho da fonte */
+p,
+li,
+span {
+    font-size: 20px;
+    /* tamanho da fonte */
 }
 
+
 p {
-    text-align: justify; /* padronizar paragrafos */
+    text-align: justify;
+    /* padronizar paragrafos */
     font-family: "Outfit", sans-serif;
     font-weight: 150;
 }
 
-strong{
-    font-weight: 800; /* espessura da fonte */
+strong {
+    font-weight: 800;
+    /* espessura da fonte */
 }
 
 
 
 /* Manipulação cabeçalho -------------------------------------------------------------------------------------------------------------------------------------*/
 #header {
-    display: flex; /* tela flexivel */
-    flex-flow: row wrap; /* quebra de linha */
-    justify-content: space-between; /* espaço por igual entre objetos (horizontal) */
-    align-items: center; /* espaço por igual entre objetos (vertical) */
-    width: 100%; /* ocupar a tela na verical */
+    display: flex;
+    /* tela flexivel */
+    flex-flow: row wrap;
+    /* quebra de linha */
+    justify-content: space-between;
+    /* espaço por igual entre objetos (horizontal) */
+    align-items: center;
+    /* espaço por igual entre objetos (vertical) */
+    width: 100%;
+    /* ocupar a tela na verical */
     padding: 10px 20px;
     z-index: 999999;
 }
 
 /* Logo */
 .logo {
-    width: 80px; /* comprimento(horizontal) */
-    height: auto; /* altura (vertical) */
+    width: 80px;
+    /* comprimento(horizontal) */
+    height: auto;
+    /* altura (vertical) */
 }
 
 /* Icone Cabeçalho (classe) */
 .header-toggle {
     display: flex;
-    justify-content: flex-end;/* pra q o icone fique no final da tela */
+    justify-content: flex-end;
+    /* pra q o icone fique no final da tela */
 }
 
 /* Icone Cabeçalho (ID) */
 #toggleTheme {
-    color: var(--color); /* cor de texto */
-    font-size: 20px; /* tamanho da fonte */
-    cursor: pointer; /* sinalizando q é um clique */
-    transition: all 0.6s ease-in-out; /* transição entre modo dark e light */
+    color: var(--color);
+    /* cor de texto */
+    font-size: 20px;
+    /* tamanho da fonte */
+    cursor: pointer;
+    /* sinalizando q é um clique */
+    transition: all 0.6s ease-in-out;
+    /* transição entre modo dark e light */
 
 }
 
@@ -178,7 +210,8 @@ strong{
 .menu {
     display: flex;
     align-items: center;
-    gap: 25px; /*gap(vão) espaço entre campos dentro do campo pai */
+    gap: 25px;
+    /*gap(vão) espaço entre campos dentro do campo pai */
 
 }
 
@@ -192,33 +225,44 @@ strong{
 }
 
 /* Personalização do texto (span dentro do <a>) */
-.menu-texto{
-    font-size: 12px; /* tamanho da fonte */
-    text-transform: uppercase; /* todas as letras em caixa alta */
-    font-family: "Outfit", sans-serif; /* estilização de fonte */  
-    font-weight: 300; /* espessura da letra (normalmente entre 100-900) */
+.menu-texto {
+    font-size: 12px;
+    /* tamanho da fonte */
+    text-transform: uppercase;
+    /* todas as letras em caixa alta */
+    font-family: "Outfit", sans-serif;
+    /* estilização de fonte */
+    font-weight: 300;
+    /* espessura da letra (normalmente entre 100-900) */
 }
 
 
 .header-nav {
-    display: none;/* faz o menu desktop sumir quando tela está menor que 768px */
+    display: none;
+    /* faz o menu desktop sumir quando tela está menor que 768px */
 }
 
 .menu-mobile .menu-link {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 8px 16px;      
+    padding: 8px 16px;
 }
 
 .menu-mobile {
     position: fixed;
-    bottom: 0;/* joga os botões la pra baixo */
-    width: 100vw; /* VW = view port */
-    justify-content: space-between;/* faz separação dos itens */
+    bottom: 0;
+    /* joga os botões la pra baixo */
+    width: 100%;
+    /* VW = view port */
+    justify-content: space-between;
+    /* faz separação dos itens */
     border-top: 1px solid var(--color);
-    z-index: 1; /* sobrepoem as coisas */
-    background: var(--bgd); /* muda cor da div */    
+    box-shadow: 0 0 5px var(--sombra);
+    z-index: 999999999;
+    /* sobrepoem as coisas */
+    background: var(--bgd);
+    /* muda cor da div */
 }
 
 /* configuração de hover do mouse */
@@ -229,8 +273,8 @@ strong{
     color: var(--hover);
 }
 
-.icone-link, 
-.menu-texto{
+.icone-link,
+.menu-texto {
     color: var(--links);
     font-weight: 400;
 }
@@ -244,16 +288,20 @@ strong{
 
 /* Inicio CSS Main ------------------------------------------------------------------------------------------------------------------------ */
 
-#home{
+#home {
     display: flex;
-    flex-direction: column; /* direção principal que os itens irão se organizar */
-    gap: 32px; /* vão entre entidades */
+    flex-direction: column;
+    /* direção principal que os itens irão se organizar */
+    gap: 32px;
+    /* vão entre entidades */
 }
 
-.main-content{
+.main-content {
     display: flex;
-    flex-direction: column;/* direção principal que os itens irão se organizar */
-    gap: 25px; /* vão entre entidades */
+    flex-direction: column;
+    /* direção principal que os itens irão se organizar */
+    gap: 25px;
+    /* vão entre entidades */
 }
 
 .main-content p {
@@ -266,12 +314,16 @@ strong{
     justify-content: center;
     align-items: center;
     gap: 5px;
-    background: transparent;/* deixa fundo transparente */
+    background: transparent;
+    /* deixa fundo transparente */
     width: 100%;
-    border: none; /* tirar a borda do botão */
+    border: none;
+    /* tirar a borda do botão */
     padding: 8px 10px;
-    border-radius: 10px ; /* deixa os cantos arredondados */
-    cursor: pointer; /* mostra pro usuario o mouse de clique */
+    border-radius: 10px;
+    /* deixa os cantos arredondados */
+    cursor: pointer;
+    /* mostra pro usuario o mouse de clique */
 }
 
 /* botão principal */
@@ -289,9 +341,11 @@ strong{
     font-size: 18px;
 }
 
-.btn:hover{
-    transform: scale(1.07); /* da um zoom no elemento */
-    transition: all ease-in-out .4s; /* muda o tempo da animação */
+.btn:hover {
+    transform: scale(1.07);
+    /* da um zoom no elemento */
+    transition: all ease-in-out .4s;
+    /* muda o tempo da animação */
 }
 
 /* Mudar cor da palavra e do icone no zoom */
@@ -300,7 +354,7 @@ strong{
     color: var(--hover);
 }
 
-.video iframe{
+.video iframe {
     width: 100%;
     aspect-ratio: 16/9;
 }
@@ -312,7 +366,7 @@ strong{
 
 .icone-social:hover {
     color: var(--hover);
-    transition: ease-in-out .5s;    
+    transition: ease-in-out .5s;
 }
 
 
@@ -340,11 +394,14 @@ strong{
 
 .card-img {
     width: 100%;
-    pointer-events: none; /* bloquea as opções do botão direito */
-    border-radius: 10px; /* arredonda os cantos */
+    pointer-events: none;
+    /* bloquea as opções do botão direito */
+    border-radius: 10px;
+    /* arredonda os cantos */
     object-fit: cover;
     object-position: center;
-    box-shadow: 0 0 5px var(--sombra); /* sombreamento do objeto */
+    box-shadow: 0 0 5px var(--sombra);
+    /* sombreamento do objeto */
 }
 
 .card-description {
@@ -355,12 +412,12 @@ strong{
     margin-bottom: 15px;
 }
 
-.icon-list{
+.icon-list {
     color: #05a2e5;
     font-size: 14px;
 }
 
-.card-item{
+.card-item {
     margin-left: 10px;
     font-size: 20px;
     margin-bottom: 5px;
@@ -370,23 +427,29 @@ strong{
 
 /* Sobre -----------------------------------------------------------------------------------------------------------------------------------------*/
 
-.sobre{
+.sobre {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    font-family: "Outfit", sans-serif;
 }
 
-.sobre-perfil{
+.sobre li {
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
+}
+
+.sobre-perfil {
     width: 100%;
     height: auto;
     pointer-events: none;
     border-radius: 50%;
     border: 8px solid var(--color);
-    object-position: center; 
+    object-position: center;
 }
 
 .sobre-content1,
-.sobre-content2{
+.sobre-content2 {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -402,14 +465,14 @@ strong{
 }
 
 .sobre-skills,
-.sobre-icones{
+.sobre-icones {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
 .sobre-skills i,
-.sobre-icones i{
+.sobre-icones i {
     font-size: 20px;
     color: #05a2e5;
 }
@@ -422,7 +485,7 @@ strong{
     gap: 32px;
 }
 
-.row2 .sobre-lista li{
+.row2 .sobre-lista li {
     margin-bottom: 7px;
 }
 
@@ -443,11 +506,12 @@ strong{
     margin-top: 10px;
 }
 
-.accordion-header.start{
+.accordion-header.start {
     margin-top: 0px;
 }
 
-.accordion-header span, i {
+.accordion-header span,
+i {
     color: var(--color);
 }
 
@@ -465,18 +529,18 @@ strong{
     background: var(--color);
 }
 
-.accordion-item.active .accordion-header span, 
-.accordion-item.active .accordion-header i{
+.accordion-item.active .accordion-header span,
+.accordion-item.active .accordion-header i {
     color: var(--bgd);
 }
 
-.accordion-item.active .accordion-body{
+.accordion-item.active .accordion-body {
     display: flex;
 }
 
 /* Contato ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-.contato{
+.contato {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -485,17 +549,19 @@ strong{
     border-bottom: 1px solid var(--color);
 }
 
-.contato p{
+.contato p {
     text-transform: uppercase;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
 }
 
-.contato .email{
+.contato .email {
     text-transform: none;
 }
 
-.contato span{
+.contato span {
     text-transform: uppercase;
     margin-left: 5px;
 }
@@ -512,7 +578,7 @@ strong{
 
 /* Forms */
 
-.form-contato{
+.form-contato {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -526,7 +592,7 @@ strong{
     font-family: "Outfit", sans-serif;
 }
 
-.form-contato label{
+.form-contato label {
     color: var(--color);
     font-size: 20px;
     font-family: "Outfit", sans-serif;
@@ -534,7 +600,7 @@ strong{
 }
 
 .form-contato input,
-.form-contato textarea{
+.form-contato textarea {
     width: 100%;
     padding: 12px;
     font-size: 18px;
@@ -548,7 +614,7 @@ strong{
 }
 
 .form-contato input:focus,
-.form-contato textarea:focus{
+.form-contato textarea:focus {
     background-color: var(--sombra);
     color: var(--bgd);
     box-shadow: 0 0 5px var(--sombra);
@@ -560,7 +626,7 @@ strong{
     min-height: 120px;
 }
 
-.form-contato .btn-primary{
+.form-contato .btn-primary {
     border-color: var(--color);
 }
 
@@ -568,11 +634,11 @@ strong{
 
 /* Rodapé ----------------------------------------------------------------------------------------------------------------------------------------- */
 
-footer{
+footer {
     margin-bottom: 80px;
 }
 
-footer p{
+footer p {
     font-size: 16px;
     text-align: center;
     padding: 16px;
@@ -580,12 +646,12 @@ footer p{
     font-weight: 170;
 }
 
-footer a{
+footer a {
     color: var(--links);
 }
 
 footer .icone-social:hover,
-footer a:hover{
+footer a:hover {
     color: #05a2e5;
     transition: ease-in-out .5s;
 }
@@ -596,7 +662,7 @@ footer a:hover{
 #home,
 .projetos,
 .sobre,
-.contato{
+.contato {
     padding: 40px 16px;
 }
 
@@ -611,11 +677,14 @@ footer a:hover{
 @media (min-width: 768px) {
 
     #header {
-        position: fixed; /* trava a div e sobrepôem os elementos */
-        border-bottom: 1px solid var(--color); /* cria uma borda embaixo da div */
+        position: fixed;
+        /* trava a div e sobrepôem os elementos */
+        border-bottom: 1px solid var(--color);
+        /* cria uma borda embaixo da div */
         box-shadow: 0 0 5px var(--sombra);
         padding: 16px 96px;
-        background-color: var(--bgd);  /* muda cor da div */
+        background-color: var(--bgd);
+        /* muda cor da div */
     }
 
     .header-nav {
@@ -624,25 +693,35 @@ footer a:hover{
 
     .header-nav,
     .header-toggle {
-        min-width: 25%; /* largura minima do elemento (até 'x') */
+        min-width: 25%;
+        /* largura minima do elemento (até 'x') */
     }
 
     .nav-mobile {
         display: none;
     }
 
-    /* Atualização futura */    
+    /* Atualização futura */
     #home,
     .projetos,
-    .sobre,
-    .contato{
-        padding: 128px 96px 64px 96px; /* 1° top 2°right 3°bottom 4°left */
+    .sobre {
+        padding: 128px 96px 64px 96px;
+        /* 1° top 2°right 3°bottom 4°left */
     }
 
     .main-content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* faz com que os valores comecem da esquerda pra direita */
+        align-items: flex-start;
+        /* faz com que os valores comecem da esquerda pra direita */
+    }
+
+    .contato {
+        padding: 96px;
+    }
+
+    footer {
+        margin: 0;
     }
 }
 
@@ -650,7 +729,8 @@ footer a:hover{
 @media (min-width: 992px) {
 
     .projeto-card {
-        flex-direction: row; /* deixa os elementos em linha */
+        flex-direction: row;
+        /* deixa os elementos em linha */
     }
 
     .projeto-card.card-reverse {
@@ -658,7 +738,7 @@ footer a:hover{
         justify-content: end;
     }
 
-    .card-reverse .card-body{
+    .card-reverse .card-body {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -683,13 +763,14 @@ footer a:hover{
     .sobre-content1,
     .sobre-content2 {
         display: grid;
-        grid-template-columns: 40% 60%; /* dvide a parte que a div vai ocupar */
+        grid-template-columns: 40% 60%;
+        /* dvide a parte que a div vai ocupar */
         justify-content: flex-start;
         gap: 64px;
     }
 
     .sobre-content2 .col1 .row1,
-    .sobre-content2 .col1 .row2{
+    .sobre-content2 .col1 .row2 {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -710,23 +791,26 @@ footer a:hover{
 /* 1200px */
 @media (min-width: 1200px) {
 
-    #home{
-        padding: 160px 96px 32px;  /* 1° top 2°right&left 3° bottom*/
+    #home {
+        padding: 160px 96px 32px;
+        /* 1° top 2°right&left 3° bottom*/
     }
 
-    h1{
+    h1 {
         font-size: 85px;
     }
 
-    h2{
+    h2 {
         font-size: 65px;
     }
 
-    p, span, li{
+    p,
+    span,
+    li {
         font-size: 20px;
     }
 
-    .descricao-button .btn{
+    .descricao-button .btn {
         width: auto;
     }
 }
@@ -734,27 +818,43 @@ footer a:hover{
 /* 1400px */
 @media (min-width: 1400px) {
 
-    h1{
+    h1 {
         font-size: 100px;
     }
 
-    h2{
+    h2 {
         font-size: 70px;
     }
 
     .projetos,
     .sobre,
-    .contato{
+    .contato {
         padding: 140px 240px 64px;
     }
 }
 
 @media (max-width: 992px) {
+
     .card-body {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-}
 
+    .sobre {
+        padding: 0 96px;
+    }
+
+    .sobre-perfil {
+        width: 50%;
+        margin-left: 25%;
+        align-items: center;
+    }
+
+    .contato .menu {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+}
